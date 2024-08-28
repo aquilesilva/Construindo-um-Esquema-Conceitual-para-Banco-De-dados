@@ -1,0 +1,46 @@
+1. Identificação das Entidades
+Cliente: Representa o cliente da oficina.
+Atributos: ID_Cliente, Nome, Endereço, Telefone.
+Veículo: Representa os veículos trazidos pelos clientes.
+Atributos: Placa, Modelo, Ano, ID_Cliente.
+Mecânico: Representa os mecânicos que realizam os serviços.
+Atributos: ID_Mecânico, Nome, Endereço, Especialidade.
+Equipe: Representa a equipe de mecânicos designada a um serviço.
+Atributos: ID_Equipe.
+Ordem de Serviço (OS): Representa a ordem de serviço criada para cada veículo.
+Atributos: Nº_OS, Data_Emissão, Valor_Total, Status, Data_Conclusão, ID_Veículo, ID_Equipe.
+Serviço: Representa os serviços executados em cada OS.
+Atributos: ID_Serviço, Descrição, Valor_Mão_de_Obra, ID_OS.
+Peça: Representa as peças usadas em cada serviço.
+Atributos: ID_Peça, Descrição, Valor, ID_Serviço.
+2. Identificação dos Relacionamentos
+"Cliente possui Veículo": Relacionamento 1
+entre Cliente e Veículo.
+"Veículo recebe OS": Relacionamento 1
+entre Veículo e OS.
+"Equipe é designada para OS": Relacionamento 1
+entre Equipe e OS.
+"Equipe composta por Mecânicos": Relacionamento N
+entre Equipe e Mecânico (necessário uma entidade associativa Equipe_Mecânico).
+"OS inclui Serviços": Relacionamento 1
+entre OS e Serviço.
+"Serviço utiliza Peças": Relacionamento 1
+entre Serviço e Peça.
+3. Criação do Diagrama Entidade-Relacionamento (ER)
+Com base nas entidades e relacionamentos identificados, você pode criar o diagrama ER. Este diagrama deverá incluir:
+
+As entidades listadas, com seus respectivos atributos.
+Relacionamentos entre as entidades, com as cardinalidades (1
+, N
+, etc.).
+4. README.md do GitHub
+Descrição do Projeto: Explique o objetivo do sistema e o que o esquema conceitual representa.
+Narrativa do Contexto: Adicione a narrativa do problema como base para o desenvolvimento do esquema.
+Explicação das Entidades e Relacionamentos: Descreva cada entidade, seus atributos e os relacionamentos, além de qualquer decisão de design tomada durante o processo.
+Compreensão Contextual: Se houve suposições ou definições adicionais feitas devido à falta de informações na narrativa, explique-as aqui.
+5. Publicação no GitHub
+Crie um repositório no GitHub.
+Adicione o arquivo do diagrama ER (pode ser uma imagem ou PDF).
+Adicione o arquivo README.md com a descrição do projeto.
+Commit e push para o repositório.
+Esse esquema conceitual servirá como base para o desenvolvimento subsequente do banco de dados físico e lógico, suportando o sistema de gerenciamento da oficina. Se precisar de ajuda para criar o diagrama ou outras etapas, estou à disposição!
